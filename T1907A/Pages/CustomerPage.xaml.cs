@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using System.Collections.ObjectModel;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -23,19 +24,28 @@ namespace T1907A.Pages
     /// </summary>
     public sealed partial class CustomerPage : Page
     {
-       // public static List<Customer> customers = new List<Customer>();
-
+      
         public CustomerPage()
         {
             this.InitializeComponent();
+        }
+
+        private void ListViewLoaded(object sender, RoutedEventArgs e)
+        {
+            ObservableCollection<Customer> customers = new ObservableCollection<Customer>();
+            customers.Add(new Customer("quang1", "1234", 13, new DateTime()));
+            customers.Add(new Customer("quang2", "1234", 13, new DateTime()));
+            customers.Add(new Customer("quang3", "1234", 13, new DateTime()));
+            LV.ItemsSource = customers;
         }
 
         private void Submit_Click(object sender, RoutedEventArgs e)
         {
             Customer c = new Customer(FullName.Text, Telephone.Text,
                 Convert.ToInt32(Age.Text), Birthday.Date.DateTime);
-            //customers.Add(c);
-            LV.Items.Add(c.ToString());
+         
+            //LV.Items.Add(c.ToString());
+            LV.Items.Add(c);
         }
 
     }

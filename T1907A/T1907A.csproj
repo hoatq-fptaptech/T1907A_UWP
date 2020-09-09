@@ -123,8 +123,15 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Mail.cs" />
     <Compile Include="Pages\CustomerPage.xaml.cs">
       <DependentUpon>CustomerPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ScrollViewerDemo.xaml.cs">
+      <DependentUpon>ScrollViewerDemo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Session2.xaml.cs">
+      <DependentUpon>Session2.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -153,6 +160,14 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Pages\CustomerPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\ScrollViewerDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Session2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
