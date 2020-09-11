@@ -67,7 +67,7 @@ namespace T1907A
                     // When the navigation stack isn't restored navigate to the first page,
                     // configuring the new page by passing required information as a navigation
                     // parameter
-                    rootFrame.Navigate(typeof(Session2), e.Arguments);
+                    rootFrame.Navigate(typeof(SplitViewDemo), e.Arguments);
 
                 }
                 // Ensure the current window is active

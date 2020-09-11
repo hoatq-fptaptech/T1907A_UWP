@@ -124,6 +124,7 @@
     </Compile>
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Mail.cs" />
+    <Compile Include="Models\MenuItem.cs" />
     <Compile Include="Pages\CustomerPage.xaml.cs">
       <DependentUpon>CustomerPage.xaml</DependentUpon>
     </Compile>
@@ -132,6 +133,9 @@
     </Compile>
     <Compile Include="Pages\Session2.xaml.cs">
       <DependentUpon>Session2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SplitViewDemo.xaml.cs">
+      <DependentUpon>SplitViewDemo.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -168,6 +172,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\Session2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\SplitViewDemo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
