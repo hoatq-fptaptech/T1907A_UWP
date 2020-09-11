@@ -10,16 +10,20 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <SplitView x:Name="SV" DisplayMode="CompactInline" HorizontalAlignment="Left"
-               IsPaneOpen="False" Width="150">
+               IsPaneOpen="False" OpenPaneLength="250">
         <SplitView.Pane>
             <Grid>
-                <Button x:Name="Btn" Click="Button_Click" Width="50" Height="30" Content="Click" VerticalAlignment="Top" HorizontalAlignment="Left"/>
-                <ListView Margin="0,50,0,0" x:Name="LV" Loaded="ListView_Loaded">
+                <ListView  x:Name="LV" Loaded="ListView_Loaded">
+                    <ListView.Header>
+                        <AppBarButton VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="Button_Click" Icon="List" HorizontalAlignment="Left" VerticalAlignment="Top">
+                            <FontIcon VerticalAlignment="Center" HorizontalAlignment="Left" FontFamily="Segoe MDL2 Assets" Glyph="&#xE847;"/>
+                        </AppBarButton>
+                    </ListView.Header>
                     <ListView.ItemTemplate>
                         <DataTemplate x:DataType="models:MenuItem">
                             <ListViewItem>
                                 <Grid>
-                                    <FontIcon HorizontalAlignment="Left" Height="40" Width="40" FontFamily="Segoe MDL2 Assets" Glyph="{x:Bind Icon}"/>
+                                    <FontIcon HorizontalAlignment="Left" FontFamily="Segoe MDL2 Assets" Glyph="{x:Bind Icon}"/>
                                     <TextBlock VerticalAlignment="Center" Margin="45,0,0,0" Text="{x:Bind Name}"/>
                                 </Grid>
                             </ListViewItem>

@@ -31,16 +31,6 @@ namespace T1907A.Pages
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             SV.IsPaneOpen = !SV.IsPaneOpen;
-            if (SV.IsPaneOpen)
-            {
-                Btn.HorizontalAlignment = HorizontalAlignment.Right;
-                Btn.Content = "Close";
-            }
-            else
-            {
-                Btn.HorizontalAlignment = HorizontalAlignment.Left;
-                Btn.Content = "Open";
-            }
         }
 
         private void ListView_Loaded(object sender, RoutedEventArgs e)
