@@ -21,7 +21,7 @@
                     </ListView.Header>
                     <ListView.ItemTemplate>
                         <DataTemplate x:DataType="models:MenuItem">
-                            <ListViewItem>
+                            <ListViewItem Tapped="ListViewItem_Tapped">
                                 <Grid>
                                     <FontIcon HorizontalAlignment="Left" FontFamily="Segoe MDL2 Assets" Glyph="{x:Bind Icon}"/>
                                     <TextBlock VerticalAlignment="Center" Margin="45,0,0,0" Text="{x:Bind Name}"/>
@@ -32,8 +32,8 @@
                 </ListView>
             </Grid>
         </SplitView.Pane>
-        <Grid Margin="10">
-            <TextBlock Text="Home"/>
-        </Grid>
+        <ScrollViewer Margin="10" Loaded="ScrollViewer_Loaded">
+            <Frame x:Name="FrContent"/>
+        </ScrollViewer>
     </SplitView>
 </Page>

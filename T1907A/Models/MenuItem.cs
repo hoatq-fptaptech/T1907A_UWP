@@ -10,11 +10,19 @@ namespace T1907A.Models
     {
         char icon;
         string name;
+        string dest;
 
-        public MenuItem(char icon, string name)
+        public MenuItem(char icon, string name,string dest)
         {
             Icon = icon;
             Name = name;
+            Dest = dest;
+        }
+
+        public string Dest
+        {
+            get => dest;
+            set => dest = value;
         }
 
         public char Icon

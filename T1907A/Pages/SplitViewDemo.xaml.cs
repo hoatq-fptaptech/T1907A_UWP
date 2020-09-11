@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -23,6 +24,9 @@ namespace T1907A.Pages
     /// </summary>
     public sealed partial class SplitViewDemo : Page
     {
+        public static Frame contentFrame;
+        //public static ObservableCollection<Mail> listMails = new ObservableCollection<Mail>();;
+
         public SplitViewDemo()
         {
             this.InitializeComponent();
@@ -35,8 +39,26 @@ namespace T1907A.Pages
 
         private void ListView_Loaded(object sender, RoutedEventArgs e)
         {
-            LV.Items.Add(new MenuItem((char)(Convert.ToInt32("E80F",16)), "Home"));
-            LV.Items.Add(new MenuItem((char)(Convert.ToInt32("EA4A", 16)), "Contact"));
+            LV.Items.Add(new MenuItem((char)(Convert.ToInt32("E80F",16)), "List Contact","lst"));
+            LV.Items.Add(new MenuItem((char)(Convert.ToInt32("EA4A", 16)), "Add Contact","add"));
+        }
+
+        private void ListViewItem_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            MenuItem selected = (MenuItem)LV.SelectedItem;
+            if (selected.Dest.Equals("lst"))
+            {
+                FrContent.Navigate(typeof(ContactList));
+            }else if (selected.Dest.Equals("add"))
+            {
+                FrContent.Navigate(typeof(AddContact));
+            }
+        }
+
+        private void ScrollViewer_Loaded(object sender, RoutedEventArgs e)
+        {
+            contentFrame = FrContent;
+            FrContent.Navigate(typeof(ContactList));
         }
     }
 }
