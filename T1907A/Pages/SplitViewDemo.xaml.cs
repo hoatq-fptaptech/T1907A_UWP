@@ -25,7 +25,6 @@ namespace T1907A.Pages
     public sealed partial class SplitViewDemo : Page
     {
         public static Frame contentFrame;
-        //public static ObservableCollection<Mail> listMails = new ObservableCollection<Mail>();;
 
         public SplitViewDemo()
         {

@@ -9,8 +9,9 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <RelativePanel Margin="50,20,0,0">
+        
         <TextBox Width="200" x:Name="Email" Margin="0,10,0,0" PlaceholderText="Email" Text=""/>
         <TextBox Width="200" RelativePanel.Below="Email" Margin="0,10,0,0" x:Name="Subject" PlaceholderText="Subject" Text=""/>
-        <Button Width="100" Height="30" Margin="0,10,0,0" RelativePanel.Below="Subject" Content="Submit" Click="Button_Click"/>
+        <Button x:Name="Btn" Width="100" Height="30" Margin="0,10,0,0" RelativePanel.Below="Subject" Content="Submit" Click="Button_Click"/>
     </RelativePanel>
 </Page>

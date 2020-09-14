@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,6 +9,7 @@ namespace T1907A.Models
 {
     class Mail
     {
+        public static List<Mail> mails = new List<Mail>();
         private string email;
         private string subject;
         private string description;
@@ -37,5 +39,6 @@ namespace T1907A.Models
             get => description;
             set => description = value;
         }
+
     }
 }

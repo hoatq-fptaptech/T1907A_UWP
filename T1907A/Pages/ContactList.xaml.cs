@@ -13,6 +13,8 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using T1907A.Models;
+using System.Collections.ObjectModel;
+using System.Net.Http;
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace T1907A.Pages
@@ -22,13 +24,12 @@ namespace T1907A.Pages
     /// </summary>
     public sealed partial class ContactList : Page
     {
-        //public static List<Mail> mails = new List<Mail>();
-
         public ContactList()
         {
             this.InitializeComponent();
+            ViewModels.ViewModel vm = new ViewModels.ViewModel();
+            GV.ItemsSource = vm.Mails;
         }
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             SplitViewDemo.contentFrame.Navigate(typeof(AddContact));

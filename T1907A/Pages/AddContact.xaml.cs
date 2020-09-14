@@ -29,7 +29,8 @@ namespace T1907A.Pages
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            //ContactList.mails
+            ViewModels.ViewModel.MailList.Add(new Models.Mail(Email.Text,Subject.Text,"description"));
+            SplitViewDemo.contentFrame.Navigate(typeof(ContactList));
         }
     }
 }
