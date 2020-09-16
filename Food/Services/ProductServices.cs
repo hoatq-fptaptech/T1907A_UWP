@@ -1,4 +1,5 @@
-﻿using Food.Models;
+﻿using Food.Adapters;
+using Food.Models;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -12,11 +13,11 @@ namespace Food.Services
 {
     class ProductServices
     {
+        private Adapter _adapter = new Adapter();
         public async Task<ProductList> TodaySpecial()
         {
-            string stringUrl = String.Format("https://foodgroup.herokuapp.com/api/today-special");
             HttpClient httpClient = new HttpClient();
-            var response = await httpClient.GetAsync(stringUrl);
+            var response = await httpClient.GetAsync(_adapter.TodaySpecial);
             if(response.StatusCode == HttpStatusCode.OK)
             {
                 var stringContent = await response.Content.ReadAsStringAsync();
