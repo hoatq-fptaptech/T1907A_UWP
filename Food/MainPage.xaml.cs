@@ -12,9 +12,10 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-
-// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
-
+using System.Net.Http;
+using System.Net;
+using Food.Models;
+using Newtonsoft.Json;
 namespace Food
 {
     /// <summary>
@@ -22,9 +23,24 @@ namespace Food
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        private readonly string stringUrl = String.Format("https://foodgroup.herokuapp.com/api/menu");
+
         public MainPage()
         {
             this.InitializeComponent();
+            GetMenu();
+        }
+
+        public async void GetMenu()
+        {
+            HttpClient httpClient = new HttpClient();// shippner
+            var response = await httpClient.GetAsync(stringUrl);
+            if(response.StatusCode == HttpStatusCode.OK)
+            {
+                var stringContent = await response.Content.ReadAsStringAsync();
+                Menu menu = JsonConvert.DeserializeObject<Menu>(stringContent);
+                MN.ItemsSource = menu.data;
+            }
         }
     }
 }

@@ -10,13 +10,13 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
     <SplitView Background="#f0f0f0" PaneBackground="#292728" OpenPaneLength="200" DisplayMode="Inline" IsPaneOpen="True">
         <SplitView.Pane>
-            <ListView Margin="0,50,0,0" x:Name="Menu">
+            <ListView Margin="0,50,0,0" x:Name="MN">
                 <ListView.ItemTemplate>
                     <DataTemplate x:DataType="models:MenuItem">
                         <ListViewItem>
                             <Grid>
-                                <FontIcon HorizontalAlignment="Left" FontFamily="Segoe MDL2 Assets" Glyph="{x:Bind Icon}"/>
-                                <TextBlock VerticalAlignment="Center" Margin="45,0,0,0" Text="{x:Bind Name}"/>
+                                <FontIcon HorizontalAlignment="Left" FontFamily="Segoe MDL2 Assets" Glyph="{x:Bind icon}"/>
+                                <TextBlock VerticalAlignment="Center" Margin="45,0,0,0" Text="{x:Bind name}"/>
                             </Grid>
                         </ListViewItem>
                     </DataTemplate>

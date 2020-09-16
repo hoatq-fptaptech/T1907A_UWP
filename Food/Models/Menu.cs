@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace Food.Models
 {
-    class MenuItem
+    class Menu
     {
-        public int id { get; set;}
-        public string icon { get; set;}
-        public string name { get; set;}
+        public string message { get; set; }
+        public List<MenuItem> data { get; set; }
     }
 }
