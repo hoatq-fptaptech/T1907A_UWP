@@ -15,8 +15,8 @@
                     <DataTemplate x:DataType="models:MenuItem">
                         <ListViewItem>
                             <Grid>
-                                <FontIcon HorizontalAlignment="Left" FontFamily="Segoe MDL2 Assets" Glyph="{x:Bind icon}"/>
-                                <TextBlock VerticalAlignment="Center" Margin="45,0,0,0" Text="{x:Bind name}"/>
+                                <Image Width="40" Height="40" HorizontalAlignment="Left" Source="{x:Bind icon}"/>
+                                <TextBlock Foreground="White" VerticalAlignment="Center" Margin="45,0,0,0" Text="{x:Bind name}"/>
                             </Grid>
                         </ListViewItem>
                     </DataTemplate>
