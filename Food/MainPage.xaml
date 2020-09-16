@@ -38,8 +38,8 @@
                         <FontIcon Margin="20,0,0,0" RelativePanel.RightOf="Setting"  x:Name="ShutDown" FontFamily="Segoe MDL2 Assets" Glyph="&#xE7E8;"/>
                     </RelativePanel>
                 </RelativePanel>
-                <ScrollViewer Grid.Row="1" Margin="10">
-                    <Frame x:Name="MainFrame"/>
+                <ScrollViewer Grid.Row="1" Margin="10" Loaded="ScrollViewer_Loaded">
+                    <Frame Background="#f0f0f0" x:Name="MainFrame"/>
                 </ScrollViewer>
             </Grid>
             

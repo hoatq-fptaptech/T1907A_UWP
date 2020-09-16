@@ -16,6 +16,8 @@ using System.Net.Http;
 using System.Net;
 using Food.Models;
 using Newtonsoft.Json;
+using Food.Pages;
+
 namespace Food
 {
     /// <summary>
@@ -41,6 +43,11 @@ namespace Food
                 Menu menu = JsonConvert.DeserializeObject<Menu>(stringContent);
                 MN.ItemsSource = menu.data;
             }
+        }
+
+        private void ScrollViewer_Loaded(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(typeof(Home));
         }
     }
 }
