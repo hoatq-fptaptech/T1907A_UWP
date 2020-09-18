@@ -49,5 +49,11 @@ namespace Food
         {
             MainFrame.Navigate(typeof(Home));
         }
+
+        private void ListViewItem_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            MenuItem menuItem = MN.SelectedItem as MenuItem;
+            MainFrame.Navigate(typeof(Category),menuItem);
+        }
     }
 }

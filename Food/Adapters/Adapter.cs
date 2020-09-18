@@ -14,5 +14,10 @@ namespace Food.Adapters
         {
             get => String.Format(baseURL + "/api/today-special");
         }
+
+        public string CategoryDetail(int id)
+        {
+            return  String.Format(baseURL + "/api/category/"+id);
+        }
     }
 }
