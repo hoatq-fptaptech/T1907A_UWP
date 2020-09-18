@@ -36,8 +36,17 @@ namespace Food.Pages
         {
             MenuItem menuItem = e.Parameter as MenuItem;
             CatDetail = menuItem;
+            ButtonBack.IsEnabled = this.Frame.CanGoBack;
             Models.CategoryDetail catDetail = await _categoryService.CategoryDetail(CatDetail.id);
             ProductList.ItemsSource = catDetail.data.foods;
+        }
+
+        private void ButtonBack_Click(object sender, RoutedEventArgs e)
+        {
+            if (this.Frame.CanGoBack)
+            {
+                this.Frame.GoBack();
+            }
         }
     }
 }

@@ -10,8 +10,13 @@
     Background="#F0f0f0">
 
     <RelativePanel Padding="15">
-        <TextBlock Margin="10" FontWeight="SemiBold" FontSize="18" Foreground="#232323" x:Name="CatName" Text="{x:Bind CatDetail.name}"/>
-        <GridView Margin="0,20,0,0" RelativePanel.Below="CatName" x:Name="ProductList">
+        <CommandBar x:Name="CmBar">
+            <CommandBar.Content>
+                <Button x:Name="ButtonBack" Click="ButtonBack_Click" Style="{StaticResource NavigationBackButtonNormalStyle}" />
+            </CommandBar.Content>
+        </CommandBar>
+        <TextBlock  RelativePanel.AlignHorizontalCenterWithPanel="True" Margin="10" FontWeight="SemiBold" FontSize="18" Foreground="#232323" x:Name="CatName" Text="{x:Bind CatDetail.name}"/>
+        <GridView Margin="0,20,0,0" RelativePanel.Below="CmBar" x:Name="ProductList">
             <GridView.ItemTemplate>
                 <DataTemplate x:DataType="models:Product">
                     <GridViewItem Background="White" Margin="10" Padding="15" Width="280" Height="300">
