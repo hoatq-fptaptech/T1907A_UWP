@@ -56,5 +56,11 @@ namespace Food
             MenuItem menuItem = MN.SelectedItem as MenuItem;
             MainFrame.Navigate(typeof(Category),menuItem);
         }
+
+       
+        private void FontIcon_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            MainFrame.Navigate(typeof(Favourite));
+        }
     }
 }

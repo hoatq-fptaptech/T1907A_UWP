@@ -32,10 +32,13 @@
                 <RelativePanel Grid.Row="0" x:Name="AppTop">
                     <Image x:Name="Logo" Margin="25,-1,0,0" VerticalAlignment="Top" HorizontalAlignment="Right"  Width="100" Height="120" Source="Assets/logo.png"/>
                     <TextBlock RelativePanel.RightOf="Logo" Margin="15,10,0,0" Text="Xin chào, đây là ứng dụng mua thực phẩm"/>
-                    <RelativePanel Margin="0,10,0,0" Width="120" RelativePanel.AlignRightWithPanel="True">
+                    <RelativePanel Margin="0,10,0,0" Width="160" RelativePanel.AlignRightWithPanel="True">
                         <FontIcon x:Name="Alert" FontFamily="Segoe MDL2 Assets" Glyph="&#xE701;"/>
                         <FontIcon Margin="20,0,0,0" RelativePanel.RightOf="Alert" x:Name="Setting" FontFamily="Segoe MDL2 Assets" Glyph="&#xE713;"/>
                         <FontIcon Margin="20,0,0,0" RelativePanel.RightOf="Setting"  x:Name="ShutDown" FontFamily="Segoe MDL2 Assets" Glyph="&#xE7E8;"/>
+
+                        <FontIcon Margin="20,0,0,0" RelativePanel.RightOf="ShutDown" Tapped="FontIcon_Tapped"  FontFamily="Segoe MDL2 Assets" Glyph="&#xEB51;"/>
+                        
                     </RelativePanel>
                 </RelativePanel>
                 <ScrollViewer Grid.Row="1" Margin="10" Loaded="ScrollViewer_Loaded">
