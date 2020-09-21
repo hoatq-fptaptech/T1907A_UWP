@@ -26,11 +26,12 @@ namespace Food
     public sealed partial class MainPage : Page
     {
         private readonly string stringUrl = String.Format("https://foodgroup.herokuapp.com/api/menu");
-
+        public static Frame mainFrame;
         public MainPage()
         {
             this.InitializeComponent();
             GetMenu();
+            mainFrame = MainFrame;
         }
 
         public async void GetMenu()

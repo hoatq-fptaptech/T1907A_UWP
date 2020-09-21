@@ -8,6 +8,15 @@ namespace Food.Models
 {
     class Product
     {
+        public Product(int id, string name, string image, string description, int price)
+        {
+            this.id = id;
+            this.name = name;
+            this.image = image;
+            this.description = description;
+            this.price = price;
+        }
+
         public int id { get; set; }
         public string name { get; set; }
         public string image { get; set; }
