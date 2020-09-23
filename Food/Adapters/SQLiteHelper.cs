@@ -25,6 +25,7 @@ namespace Food.Adapters
         {
             sQLiteConnection = new SQLiteConnection(DB_Name);
             CreateProductTable();
+            CreateCartTable();
         }
 
         public SQLiteConnection sQLiteConnection
@@ -39,5 +40,13 @@ namespace Food.Adapters
             var statement = sQLiteConnection.Prepare(sql);
             statement.Step();
         }
+
+        private void CreateCartTable()
+        {
+            var sql = @"CREATE TABLE IF NOT EXISTS Cart(id integer primary key, name varchar(200), image varchar(200), price integer, qty integer)";
+            var statement = sQLiteConnection.Prepare(sql);
+            statement.Step();
+        }
+
     }
 }

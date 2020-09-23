@@ -40,5 +40,11 @@ namespace Food.Pages
                 ProductList.ItemsSource = productList.data;
             }
         }
+
+        private void GridViewItem_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            Product detail = ProductList.SelectedItem as Product;
+            MainPage.mainFrame.Navigate(typeof(ProductDetail), detail);
+        }
     }
 }

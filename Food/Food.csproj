@@ -117,12 +117,15 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Adapters\Adapter.cs" />
+    <Compile Include="Adapters\CartService.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\Cart.cs" />
+    <Compile Include="Models\CartItem.cs" />
     <Compile Include="Models\CategoryDetail.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\Menu.cs" />

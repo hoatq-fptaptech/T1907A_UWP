@@ -32,6 +32,10 @@ namespace Food
             this.InitializeComponent();
             GetMenu();
             mainFrame = MainFrame;
+            Cart cart = new Cart();
+            List<CartItem> cartItems = cart.GetCarts();
+            CartNumber.Text = cartItems.Count.ToString();
+            CartNumber.Opacity = cartItems.Count > 0 ? 1 : 0;
         }
 
         public async void GetMenu()
@@ -61,6 +65,11 @@ namespace Food
         private void FontIcon_Tapped(object sender, TappedRoutedEventArgs e)
         {
             MainFrame.Navigate(typeof(Favourite));
+        }
+
+        private void Alert_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            MainFrame.Navigate(typeof(Home));
         }
     }
 }

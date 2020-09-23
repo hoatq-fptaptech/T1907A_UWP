@@ -13,7 +13,7 @@
         <GridView x:Name="ProductList">
             <GridView.ItemTemplate>
                 <DataTemplate x:DataType="models:Product">
-                    <GridViewItem Background="White" Margin="10" Padding="15" Width="280" Height="300">
+                    <GridViewItem Tapped="GridViewItem_Tapped" Background="White" Margin="10" Padding="15" Width="280" Height="300">
                         <RelativePanel >
                             <Image RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.AlignTopWithPanel="True" x:Name="PImage" Width="200" Source="{x:Bind image}"/>
                             <TextBlock FontSize="16" FontWeight="SemiBold" RelativePanel.Below="PImage" Margin="0,30,0,0" x:Name="PName" Text="{x:Bind name}"/>

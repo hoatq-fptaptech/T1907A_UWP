@@ -56,5 +56,13 @@ namespace Food.Pages
             stt.Step();
             MainPage.mainFrame.Navigate(typeof(Favourite));
         }
+
+        private void BtnOrder_Click(object sender, RoutedEventArgs e)
+        {
+            CartItem item = new CartItem(Detail.id, Detail.name, Detail.image, Detail.price, Convert.ToInt32(Qty.Text));
+            Cart cart = new Cart();
+            cart.AddToCart(item);
+
+        }
     }
 }
