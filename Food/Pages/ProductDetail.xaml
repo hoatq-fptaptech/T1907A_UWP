@@ -21,7 +21,7 @@
             <Grid RelativePanel.Below="PDesc" Margin="0,10,0,0">
                 <Button x:Name="BtnOrder" Click="BtnOrder_Click" Width="100" Content="Add To Cart"/>
                 <Button Click="BtnLike_Click" Margin="120,0,0,0" x:Name="BtnLike" Content="Like"/>
-                <TextBox x:Name="Qty" Width="200" Height="32" FontSize="16" Margin="0,100,0,0" Text="1"/>
+                <TextBox x:Name="Qty"  Width="200" Height="32" FontSize="16" Margin="0,100,0,0" Text="1"/>
             </Grid>
         </RelativePanel>
     </Grid>

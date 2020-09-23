@@ -34,7 +34,7 @@
                     <TextBlock RelativePanel.RightOf="Logo" Margin="15,10,0,0" Text="Xin chào, đây là ứng dụng mua thực phẩm"/>
                     <RelativePanel Margin="0,10,0,0" Width="160" RelativePanel.AlignRightWithPanel="True">
                         <FontIcon x:Name="Alert" Tapped="Alert_Tapped" FontFamily="Segoe MDL2 Assets" Glyph="&#xE80F;"/>
-                        <FontIcon Margin="20,0,0,0" RelativePanel.RightOf="Alert" x:Name="Setting" FontFamily="Segoe MDL2 Assets" Glyph="&#xE7BF;"/>
+                        <FontIcon Margin="20,0,0,0" RelativePanel.RightOf="Alert" Tapped="Setting_Tapped" x:Name="Setting" FontFamily="Segoe MDL2 Assets" Glyph="&#xE7BF;"/>
                         <FontIcon Margin="20,0,0,0" RelativePanel.RightOf="Setting" Tapped="FontIcon_Tapped" x:Name="ShutDown" FontFamily="Segoe MDL2 Assets" Glyph="&#xEB51;"/>
                         <TextBlock x:Name="CartNumber" Text="0" FontSize="15" FontWeight="SemiBold" Foreground="Red" RelativePanel.RightOf="Setting"/>
                     </RelativePanel>

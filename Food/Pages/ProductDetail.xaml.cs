@@ -62,7 +62,7 @@ namespace Food.Pages
             CartItem item = new CartItem(Detail.id, Detail.name, Detail.image, Detail.price, Convert.ToInt32(Qty.Text));
             Cart cart = new Cart();
             cart.AddToCart(item);
-
         }
+
     }
 }

@@ -59,6 +59,7 @@ namespace Food
         {
             MenuItem menuItem = MN.SelectedItem as MenuItem;
             MainFrame.Navigate(typeof(Category),menuItem);
+            Console.WriteLine(e.ToString());
         }
 
        
@@ -70,6 +71,11 @@ namespace Food
         private void Alert_Tapped(object sender, TappedRoutedEventArgs e)
         {
             MainFrame.Navigate(typeof(Home));
+        }
+
+        private void Setting_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            MainFrame.Navigate(typeof(Carts));
         }
     }
 }
