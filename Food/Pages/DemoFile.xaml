@@ -10,6 +10,7 @@
 
     <Grid>
         <Button Content="WriteFile" Click="Button_Click" Margin="178,155,0,0" VerticalAlignment="Top"/>
-        <Button Content="ReadFile" Margin="408,160,0,0" VerticalAlignment="Top"/>
+        <Button Content="ReadFile" Click="Button_Click_1" Margin="408,160,0,0" VerticalAlignment="Top"/>
+        <TextBlock x:Name="TxtBlock" HorizontalAlignment="Left" Margin="182,290,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" Height="182" Width="565"/>
     </Grid>
 </Page>

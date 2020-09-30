@@ -32,5 +32,11 @@ namespace Food.Pages
         {
             FileHandleService.WriteFile("t1907a.txt", "xin chao tat ca cac ban");
         }
+
+        private async void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            string txt = await FileHandleService.ReadFile("t1907a.txt");
+            TxtBlock.Text = txt;
+        }
     }
 }
