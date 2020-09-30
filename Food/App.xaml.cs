@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Food.Pages;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -29,9 +30,8 @@ namespace Food
         public App()
         {
             this.InitializeComponent();
-            this.Suspending += OnSuspending;
+            this.Suspending += OnSuspending; 
         }
-
         /// <summary>
         /// Invoked when the application is launched normally by the end user.  Other entry points
         /// will be used such as when the application is launched to open a specific file.
@@ -66,7 +66,7 @@ namespace Food
                     // When the navigation stack isn't restored navigate to the first page,
                     // configuring the new page by passing required information as a navigation
                     // parameter
-                    rootFrame.Navigate(typeof(MainPage), e.Arguments);
+                    rootFrame.Navigate(typeof(DemoFile), e.Arguments);
                 }
                 // Ensure the current window is active
                 Window.Current.Activate();
@@ -95,6 +95,7 @@ namespace Food
             var deferral = e.SuspendingOperation.GetDeferral();
             //TODO: Save application state and stop any background activity
             deferral.Complete();
+            
         }
     }
 }
