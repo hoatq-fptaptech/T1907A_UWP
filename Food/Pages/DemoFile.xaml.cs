@@ -6,6 +6,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Storage;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -37,6 +38,19 @@ namespace Food.Pages
         {
             string txt = await FileHandleService.ReadFile("t1907a.txt");
             TxtBlock.Text = txt;
+        }
+
+        private async void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            var savePicker = new Windows.Storage.Pickers.FileSavePicker();
+            savePicker.SuggestedStartLocation = Windows.Storage.Pickers.PickerLocationId.DocumentsLibrary;
+            savePicker.FileTypeChoices.Add("Plain Text", new List<string>() { ".txt" });
+            savePicker.SuggestedFileName = "t1907a";
+            var file = await savePicker.PickSaveFileAsync();
+            if(file != null)
+            {
+                FileIO.WriteTextAsync(file, "Buoi tiep theo se thi");
+            }
         }
     }
 }
